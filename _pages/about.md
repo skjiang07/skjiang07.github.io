@@ -1,13 +1,13 @@
 ---
 permalink: /
-title: "👋 Hello there, I'm Shangkun!"
+title: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-I am a Ph.D. student in Transportation Engineering at the [University of Florida](https://www.ufl.edu/), advised by [Dr. Xilei Zhao](https://www.essie.ufl.edu/people/name/xilei-zhao/). Before I joined UF, I received my Master of Engineering degree in Traffic and Transportation at [Southeast University](https://www.seu.edu.cn/) in June 2023, supervised by [Dr. Peng Liao](https://tc.seu.edu.cn/2019/1022/c25722a291866/page.htm). I also obtained my bachelor's degree in Transportation Engineering from [Dalian University of Technology](https://www.dlut.edu.cn/) in June 2020.
+👋 Hello there, I'm Shangkun! I am a Ph.D. student in Transportation Engineering at the [University of Florida](https://www.ufl.edu/), advised by [Dr. Xilei Zhao](https://www.essie.ufl.edu/people/name/xilei-zhao/). Before I joined UF, I received my Master of Engineering degree in Traffic and Transportation at [Southeast University](https://www.seu.edu.cn/) in June 2023, supervised by [Dr. Peng Liao](https://tc.seu.edu.cn/2019/1022/c25722a291866/page.htm). I also obtained my bachelor's degree in Transportation Engineering from [Dalian University of Technology](https://www.dlut.edu.cn/) in June 2020.
 
 Education
 ======
