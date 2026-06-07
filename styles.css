@@ -138,6 +138,13 @@ img {
   font-weight: 800;
 }
 
+.brand-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 .brand strong,
 .brand small {
   display: block;
@@ -439,6 +446,19 @@ h3 {
 .timeline-item p,
 .talk-list p {
   color: var(--muted);
+}
+
+.profile-photo {
+  margin: 0;
+}
+
+.profile-photo img {
+  width: min(100%, 360px);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
 }
 
 .project-list {
