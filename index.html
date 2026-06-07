@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic website of Shangkun Jiang, Ph.D. candidate in Civil Engineering at the University of Florida. Research in transportation systems, mobility data, GeoAI, evacuation behavior, and traffic operations.">
+  <title>Shangkun Jiang | Transportation Researcher</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <aside class="sidebar" id="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="#about" aria-label="Shangkun Jiang home">
+      <span class="brand-mark">SJ</span>
+      <span>
+        <strong>Shangkun Jiang</strong>
+        <small>Transportation Researcher</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#talks">Talks</a>
+      <a href="#service">Service</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="files/Shangkun_Jiang_CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
+      <a href="mailto:jiang.shangkun@ufl.edu">Email</a>
+    </div>
+  </aside>
+
+  <main id="main">
+    <section class="hero section" id="about">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/research-hero.png" alt="">
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Transportation systems | Emerging mobility data | GeoAI</p>
+        <h1>Shangkun Jiang</h1>
+        <p class="hero-line">
+          I study <span id="typed-topic" aria-live="polite">transportation systems with large-scale mobility data</span>.
+        </p>
+        <p class="hero-copy">
+          I am a Ph.D. candidate in Civil Engineering at the University of Florida, advised by Dr. Xilei Zhao. My research advances transportation systems analysis with emerging mobility data, focusing on data quality, spatial bias, evacuation behavior, urban traffic monitoring, and geospatial artificial intelligence.
+        </p>
+        <div class="hero-actions" aria-label="Profile links">
+          <a class="button primary" href="#research">Research</a>
+          <a class="button" href="files/Shangkun_Jiang_CV.pdf" target="_blank" rel="noreferrer">CV</a>
+          <a class="button" href="https://scholar.google.com/citations?user=s4rHF3MAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+        </div>
+      </div>
+      <div class="metric-strip" aria-label="Research highlights">
+        <div>
+          <strong>2026</strong>
+          <span>Ph.D. expected</span>
+        </div>
+        <div>
+          <strong>10M+</strong>
+          <span>mobile device users analyzed</span>
+        </div>
+        <div>
+          <strong>11</strong>
+          <span>publications and manuscripts</span>
+        </div>
+        <div>
+          <strong>5</strong>
+          <span>reviewer venues</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-band">
+      <div class="section-heading">
+        <p class="eyebrow">Profile</p>
+        <h2>Research at the intersection of mobility data, transportation operations, and disaster resilience.</h2>
+      </div>
+      <div class="two-column">
+        <p>
+          My dissertation, <em>Advancing Transportation Systems Analysis with Emerging Mobility Data: From Operational Utility to Data Quality</em>, examines how GPS, mobile device, transit, and social media data can support transportation planning and emergency management while accounting for bias and uncertainty.
+        </p>
+        <p>
+          I work across computational modeling, causal inference, machine learning, statistical analysis, travel behavior, urban traffic, evacuation, emergency traffic modeling, and transportation resilience.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="section-heading">
+        <p class="eyebrow">Research Interests</p>
+        <h2>Core themes</h2>
+      </div>
+      <div class="research-grid">
+        <article class="topic-card">
+          <span>01</span>
+          <h3>Transportation Big Data</h3>
+          <p>Large-scale mobility datasets, data quality, data bias, travel behavior analysis, and computational modeling for transportation systems.</p>
+        </article>
+        <article class="topic-card">
+          <span>02</span>
+          <h3>GeoAI and Statistical Learning</h3>
+          <p>Causal inference, machine learning, deep learning, LLM-assisted inference, and statistical analysis for geospatial mobility problems.</p>
+        </article>
+        <article class="topic-card">
+          <span>03</span>
+          <h3>Disaster Transportation</h3>
+          <p>Evacuation behavior, emergency traffic modeling, wildfire and hurricane response, and transportation resilience under disruptions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Selected Projects</p>
+        <h2>Current and recent research</h2>
+      </div>
+
+      <div class="project-list">
+        <article class="project-card">
+          <div class="project-meta">
+            <span>University of Florida</span>
+            <time>May 2026 - Present</time>
+          </div>
+          <h3>GeoAI-Based Activity Inference from GPS Trajectories</h3>
+          <p>Developed GeoAI-Act, a two-stage framework that converts noisy GPS trajectories into semantically labeled stay episodes using Transformer-based stay detection and LLM-based purpose inference.</p>
+          <ul>
+            <li>Engineered trajectory, temporal, data-quality, and OSM-based geographic features.</li>
+            <li>Achieved 0.873 point-level F1 and 0.813 segment-level F1 for stay detection.</li>
+            <li>Improved stay purpose inference using Llama-3.1 with QLoRA.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span>University of Florida</span>
+            <time>Sept. 2025 - Present</time>
+          </div>
+          <h3>Assessing Spatial Bias of Mobile Device Location Data</h3>
+          <p>Developed a framework to evaluate spatial bias in large-scale mobility datasets using more than 10 million anonymized mobile device users across Florida.</p>
+          <ul>
+            <li>Identified systematic underrepresentation in socially disadvantaged and urban areas.</li>
+            <li>Assessed implications for transportation analysis and policy applications.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span>University of Florida</span>
+            <time>Sept. 2024 - Feb. 2025</time>
+          </div>
+          <h3>Wildfire Evacuation Behavior Using Facebook Data</h3>
+          <p>Analyzed evacuation behavior during the 2025 Palisades and Eaton fires using Facebook mobility data.</p>
+          <ul>
+            <li>Quantified evacuation compliance rates, travel distances, and destination types.</li>
+            <li>Identified spatial disparities across communities with different socioeconomic variables.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span>University of Florida</span>
+            <time>May 2024 - Sept. 2024</time>
+          </div>
+          <h3>Evacuation Orders and Traffic Conditions During Hurricane Ian</h3>
+          <p>Estimated the short-term traffic impacts of evacuation orders using high-resolution mobility datasets and causal modeling.</p>
+          <ul>
+            <li>Estimated space-mean speed and planning time index from mobile device location data.</li>
+            <li>Found a 14.9% decrease in average traffic speed and a 14.6% increase in travel time variability.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span>University of Florida</span>
+            <time>Jul. 2023 - Dec. 2023</time>
+          </div>
+          <h3>Real-Time Urban Traffic Monitoring Using Transit Buses as Probes</h3>
+          <p>Developed algorithms to estimate network-level traffic speeds using GTFS realtime transit data.</p>
+          <ul>
+            <li>Designed bus segment-trip extraction and speed estimation methods.</li>
+            <li>Validated estimates against Bluetooth sensor and Google traffic data.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span>Southeast University</span>
+            <time>Jan. 2023 - Jun. 2023</time>
+          </div>
+          <h3>Vessel Traffic Flow Modeling in Inland Waterways</h3>
+          <p>Analyzed vessel traffic flow dynamics using multi-source maritime traffic datasets and developed a piecewise fundamental diagram model.</p>
+          <ul>
+            <li>Investigated relationships among vessel speed, spacing, and traffic density.</li>
+            <li>Characterized traffic flow states in inland restricted waterways.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section publication-section" id="publications">
+      <div class="section-heading">
+        <p class="eyebrow">Publications</p>
+        <h2>Journal articles, book chapter, conference paper, and manuscripts</h2>
+      </div>
+
+      <ol class="publication-list">
+        <li>
+          <span class="pub-tag">J</span>
+          <p><strong>Jiang, S.</strong>, Sun, Y., Wong, W., Xu, Y., &amp; Zhao, X. (2025). Real-time urban traffic monitoring using transit buses as probes. <em>Transportation Research Record, 2679</em>(2), 219-236. <a href="https://doi.org/10.1177/03611981241260708" target="_blank" rel="noreferrer">doi</a></p>
+        </li>
+        <li>
+          <span class="pub-tag">J</span>
+          <p><strong>Jiang, S.</strong>, Lovreglio, R., Cova, T. J., Park, S., Xu, S., &amp; Zhao, X. (2026). Analyzing wildfire evacuation behavior using Facebook data: A case study of the 2025 Palisades and Eaton fires. Accepted for publication in <em>Transportation Research Part D: Transport and Environment</em>. <a href="https://doi.org/10.48550/arXiv.2601.01052" target="_blank" rel="noreferrer">arXiv</a></p>
+        </li>
+        <li>
+          <span class="pub-tag">R&amp;R</span>
+          <p><strong>Jiang, S.</strong>, Zhang, X., Wong, W., Park, S., &amp; Zhao, X. (2026). Examining the short-term causal impact of evacuation orders on traffic conditions: Evidence from Hurricane Ian. Minor revision invited at <em>International Journal of Disaster Risk Reduction</em>.</p>
+        </li>
+        <li>
+          <span class="pub-tag">B</span>
+          <p><strong>Jiang, S.</strong>, Zhang, X., &amp; Zhao, X. (2026). Review of multi-source data for disaster management. In X. Huang, J. Shi, &amp; M. Yang (Eds.), <em>Artificial Intelligence in Safety Science and Engineering</em> (Chap. 8, pp. 183-213). Elsevier. <a href="https://doi.org/10.1016/B978-0-443-36342-9.00008-6" target="_blank" rel="noreferrer">doi</a></p>
+        </li>
+        <li>
+          <span class="pub-tag">J</span>
+          <p>Yang, W., <strong>Jiang, S.</strong>, Liao, P., &amp; Wang, H. (2023). Evaluation of car-following model for inland vessel-following behavior. <em>Ocean Engineering, 284</em>, 115196. <a href="https://doi.org/10.1016/j.oceaneng.2023.115196" target="_blank" rel="noreferrer">doi</a></p>
+        </li>
+        <li>
+          <span class="pub-tag">J</span>
+          <p>Liu, L., Zhang, X., <strong>Jiang, S.</strong>, &amp; Zhao, X. (2025). Hurricane evacuation analysis with large-scale mobile device location data during Hurricane Ian. <em>Transportation Research Part D: Transport and Environment, 139</em>, 104559. <a href="https://doi.org/10.1016/j.trd.2024.104559" target="_blank" rel="noreferrer">doi</a></p>
+        </li>
+        <li>
+          <span class="pub-tag">J</span>
+          <p>Yang, W., Liao, P., <strong>Jiang, S.</strong>, &amp; Wang, H. (2025). Analysis of vessel traffic flow characteristics in inland restricted waterways using multi-source data. <em>Ocean Engineering, 317</em>, 120065. <a href="https://doi.org/10.1016/j.oceaneng.2024.120065" target="_blank" rel="noreferrer">doi</a></p>
+        </li>
+        <li>
+          <span class="pub-tag">J</span>
+          <p>Recalde, A., Liu, L., Zhang, X., Park, S., <strong>Jiang, S.</strong>, &amp; Zhao, X. (2026). Evacuation destination choices during Hurricane Ian: A direct demand modeling approach. <em>Transportation Research Part D: Transport and Environment, 156</em>, 105384. <a href="https://doi.org/10.1016/j.trd.2026.105384" target="_blank" rel="noreferrer">doi</a></p>
+        </li>
+        <li>
+          <span class="pub-tag">C</span>
+          <p><strong>Jiang, S.</strong>, &amp; Jin, C. J. (2023). Microscopic simulations of traffic congestion in Runyang Bridge: Comparisons between two cases. In <em>Sixth International Conference on Traffic Engineering and Transportation System</em> (Vol. 12591, pp. 865-870). SPIE. <a href="https://doi.org/10.1117/12.2668553" target="_blank" rel="noreferrer">doi</a></p>
+        </li>
+        <li>
+          <span class="pub-tag">S</span>
+          <p>Garces, S., <strong>Jiang, S.</strong>, Lovreglio, R., Kuligowski, E., Cova, T. J., Xu, S., &amp; Zhao, X. (2025). A systematic literature review for wildfire emergency management platforms. Manuscript submitted for <em>Fire Technology</em>.</p>
+        </li>
+        <li>
+          <span class="pub-tag">S</span>
+          <p>Liao, P., Yang, W., <strong>Jiang, S.</strong>, &amp; Wang, H. (2024). Evaluation of waterway lock service quality in Yangtze Delta: From the perspectives of customer and supplier. Manuscript submitted for publication in <em>Maritime Policy &amp; Management</em>. <a href="https://doi.org/10.48550/arXiv.2410.07132" target="_blank" rel="noreferrer">arXiv</a></p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="education">
+      <div class="section-heading">
+        <p class="eyebrow">Education</p>
+        <h2>Academic training</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <time>Aug. 2023 - Expected Dec. 2026</time>
+          <h3>University of Florida</h3>
+          <p>Ph.D. in Civil Engineering (Transportation); Minor in Statistics</p>
+          <p>Advisor: <a href="https://faculty.eng.ufl.edu/sermos-lab/" target="_blank" rel="noreferrer">Dr. Xilei Zhao</a></p>
+          <p>Committee: Dr. Lily Elefteriadou, Dr. Siva Srinivasan, and Dr. Sayar Karmakar</p>
+        </article>
+        <article class="timeline-item">
+          <time>Sept. 2020 - Jun. 2023</time>
+          <h3>Southeast University</h3>
+          <p>M.S.E. in Traffic and Transportation</p>
+          <p>Advisor: <a href="https://tc.seu.edu.cn/jt_en/2018/0902/c20851a237293/page.psp" target="_blank" rel="noreferrer">Dr. Peng Liao</a></p>
+          <p>Thesis: Research Methods on the Capacity of Inland Waterways Based on Vessel Traffic Flow Theory</p>
+        </article>
+        <article class="timeline-item">
+          <time>Sept. 2016 - Jun. 2020</time>
+          <h3>Dalian University of Technology</h3>
+          <p>B.E. in Transportation Engineering</p>
+          <p>Advisor: Dr. Ronghan Yao</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-heading">
+        <p class="eyebrow">Experience</p>
+        <h2>Research appointments and skills</h2>
+      </div>
+      <div class="experience-grid">
+        <article class="experience-card">
+          <time>Aug. 2023 - Present</time>
+          <h3>Research Assistant</h3>
+          <p>Department of Civil and Coastal Engineering, University of Florida</p>
+        </article>
+        <article class="experience-card">
+          <time>Sept. 2020 - Jun. 2023</time>
+          <h3>Research Assistant</h3>
+          <p>School of Transportation, Southeast University</p>
+        </article>
+      </div>
+
+      <div class="skill-block">
+        <h3>Methods and tools</h3>
+        <div class="tag-cloud">
+          <span>Python</span>
+          <span>R</span>
+          <span>C</span>
+          <span>C#</span>
+          <span>MySQL</span>
+          <span>MongoDB</span>
+          <span>ArcGIS</span>
+          <span>QGIS</span>
+          <span>AutoCAD</span>
+          <span>VISSIM</span>
+          <span>SUMO</span>
+          <span>TransCAD</span>
+          <span>STATA</span>
+          <span>AMOS</span>
+          <span>SPSS</span>
+          <span>Machine Learning</span>
+          <span>Deep Learning</span>
+          <span>Academic Writing</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="talks">
+      <div class="section-heading">
+        <p class="eyebrow">Presentations</p>
+        <h2>Selected conference activity</h2>
+      </div>
+      <div class="talk-list">
+        <p><strong>TRB 105th Annual Meeting, 2026.</strong> Wildfire evacuation behavior using Facebook data; systematic review of multi-source data for disaster management; related collaborative evacuation studies.</p>
+        <p><strong>AAG Annual Meeting, 2026.</strong> Diverse mobility datasets for Eaton and Palisades fire evacuation dynamics.</p>
+        <p><strong>TRB 104th Annual Meeting, 2025.</strong> Hurricane evacuation analysis with large-scale mobile device location data; waterway lock service quality.</p>
+        <p><strong>TRB 103rd Annual Meeting, 2024.</strong> Real-time urban traffic monitoring using transit buses as probes; travel mode choice during large-scale events.</p>
+      </div>
+    </section>
+
+    <section class="section service-section" id="service">
+      <div class="section-heading">
+        <p class="eyebrow">Academic Service</p>
+        <h2>Reviewer for journals and conferences</h2>
+      </div>
+      <div class="service-list">
+        <a href="https://www.sciencedirect.com/journal/applied-ocean-research" target="_blank" rel="noreferrer">Applied Ocean Research</a>
+        <a href="https://www.sciencedirect.com/journal/journal-of-ocean-engineering-and-science" target="_blank" rel="noreferrer">Journal of Ocean Engineering and Science</a>
+        <a href="https://www.nationalacademies.org/trb/transportation-research-board" target="_blank" rel="noreferrer">Transportation Research Board</a>
+        <a href="https://www.sciencedirect.com/journal/transportation-research-interdisciplinary-perspectives" target="_blank" rel="noreferrer">Transportation Research Interdisciplinary Perspectives</a>
+        <a href="https://www.sciencedirect.com/journal/transportation-research-part-d-transport-and-environment" target="_blank" rel="noreferrer">Transportation Research Part D: Transport and Environment</a>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>Get in touch</h2>
+      </div>
+      <div class="contact-panel">
+        <div>
+          <h3>Shangkun Jiang</h3>
+          <p>Civil and Coastal Engineering<br>University of Florida<br>1949 Stadium Rd, Gainesville, FL 32611</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:jiang.shangkun@ufl.edu">jiang.shangkun@ufl.edu</a>
+          <a href="https://skjiang07.github.io" target="_blank" rel="noreferrer">skjiang07.github.io</a>
+          <a href="https://www.linkedin.com/in/shangkun-jiang-281b7028a" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=s4rHF3MAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+          <a href="https://orcid.org/0009-0006-1174-1906" target="_blank" rel="noreferrer">ORCID</a>
+          <a href="https://www.researchgate.net/profile/Shangkun-Jiang-2?ev=hdr_xprf" target="_blank" rel="noreferrer">ResearchGate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Based on an academic adaptation of the Varad Bhogayata portfolio template structure. Built as a static site for GitHub Pages.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
