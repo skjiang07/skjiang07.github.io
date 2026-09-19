@@ -1,82 +1,66 @@
 const menuButton = document.querySelector(".menu-button");
 const sidebar = document.querySelector(".sidebar");
+const backdrop = document.querySelector(".nav-backdrop");
+const main = document.querySelector("main");
+const footer = document.querySelector("footer");
 const navLinks = Array.from(document.querySelectorAll(".sidebar nav a"));
-const typedTarget = document.querySelector("#typed-topic");
+const mobileQuery = window.matchMedia("(max-width: 860px)");
 
-const topics = [
-  "transportation systems with large-scale mobility data",
-  "evacuation behavior during hurricanes and wildfires",
-  "spatial bias in mobile device location data",
-  "GeoAI methods for GPS trajectory understanding",
-  "real-time traffic monitoring with transit buses"
-];
-
-let topicIndex = 0;
-let charIndex = topics[0].length;
-let deleting = true;
-
-function setMenu(open) {
-  sidebar.classList.toggle("open", open);
-  document.body.classList.toggle("nav-open", open);
-  menuButton.setAttribute("aria-expanded", String(open));
+function setMenu(open, restoreFocus = false) {
+  const expanded = open && mobileQuery.matches;
+  sidebar.classList.toggle("open", expanded);
+  document.body.classList.toggle("nav-open", expanded);
+  menuButton.setAttribute("aria-expanded", String(expanded));
+  menuButton.setAttribute("aria-label", expanded ? "Close navigation" : "Open navigation");
+  backdrop.hidden = !expanded;
+  sidebar.inert = mobileQuery.matches && !expanded;
+  main.inert = expanded;
+  footer.inert = expanded;
+  if (restoreFocus) menuButton.focus();
 }
 
-menuButton.addEventListener("click", () => {
-  setMenu(!sidebar.classList.contains("open"));
+menuButton.addEventListener("click", () => setMenu(!sidebar.classList.contains("open")));
+backdrop.addEventListener("click", () => setMenu(false, true));
+sidebar.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => setMenu(false, mobileQuery.matches));
 });
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => setMenu(false));
-});
-
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    setMenu(false);
+  if (!sidebar.classList.contains("open")) return;
+  if (event.key === "Escape") setMenu(false, true);
+  if (event.key === "Tab") {
+    const lastLink = sidebar.querySelector(".sidebar-footer a:last-child");
+    if (event.shiftKey && document.activeElement === menuButton) {
+      event.preventDefault();
+      lastLink.focus();
+    } else if (!event.shiftKey && document.activeElement === lastLink) {
+      event.preventDefault();
+      menuButton.focus();
+    }
   }
 });
+mobileQuery.addEventListener("change", () => setMenu(false));
+setMenu(false);
 
-function typeLoop() {
-  if (!typedTarget) return;
-
-  const phrase = topics[topicIndex];
-  typedTarget.textContent = phrase.slice(0, charIndex);
-
-  if (deleting) {
-    charIndex -= 1;
-    if (charIndex <= 0) {
-      deleting = false;
-      topicIndex = (topicIndex + 1) % topics.length;
-    }
-  } else {
-    charIndex += 1;
-    if (charIndex >= topics[topicIndex].length) {
-      deleting = true;
-      setTimeout(typeLoop, 1300);
-      return;
-    }
+const sections = navLinks.map((link) => document.querySelector(link.getAttribute("href")));
+let scheduled = false;
+function updateActiveSection() {
+  const offset = mobileQuery.matches ? 120 : 100;
+  let active = sections[0];
+  for (const section of sections) {
+    if (section.getBoundingClientRect().top <= offset) active = section;
   }
-
-  const delay = deleting ? 34 : 58;
-  setTimeout(typeLoop, delay);
-}
-
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    const activeLink = navLinks.find((link) => link.getAttribute("href") === `#${entry.target.id}`);
-    if (!activeLink) return;
-    navLinks.forEach((link) => link.classList.remove("active"));
-    activeLink.classList.add("active");
+  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8) active = sections.at(-1);
+  navLinks.forEach((link) => {
+    if (link.hash === "#" + active.id) link.setAttribute("aria-current", "location");
+    else link.removeAttribute("aria-current");
   });
-}, {
-  rootMargin: "-30% 0px -58% 0px",
-  threshold: 0
-});
-
-document.querySelectorAll("section[id]").forEach((section) => {
-  sectionObserver.observe(section);
-});
-
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  setTimeout(typeLoop, 1200);
+  scheduled = false;
 }
+window.addEventListener("scroll", () => {
+  if (!scheduled) {
+    scheduled = true;
+    window.requestAnimationFrame(updateActiveSection);
+  }
+}, { passive: true });
+window.addEventListener("resize", updateActiveSection);
+updateActiveSection();
