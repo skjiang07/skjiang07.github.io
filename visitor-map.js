@@ -15,6 +15,7 @@ window.renderVisitorMap = function (countries) {
   let paths = [];
   let active = -1;
   let ratio = 1;
+  let displayWidth = 0;
 
   function paint() {
     context.clearRect(0, 0, canvas.width / ratio, canvas.height / ratio);
@@ -32,9 +33,17 @@ window.renderVisitorMap = function (countries) {
   }
 
   function resize() {
-    const { width, height } = container.getBoundingClientRect();
-    if (!width || !height) return;
-    ratio = Math.min(window.devicePixelRatio || 1, 2);
+    const width = Math.min(720, container.getBoundingClientRect().width);
+    const nextRatio = Math.min(window.devicePixelRatio || 1, 2);
+    if (width <= 20 || (width === displayWidth && nextRatio === ratio)) return;
+    const height = width / 2;
+    displayWidth = width;
+    ratio = nextRatio;
+    // Keep CSS size independent of backing pixels, even if the stylesheet is unavailable.
+    canvas.style.display = "block";
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    canvas.style.margin = "0 auto";
     canvas.width = Math.round(width * ratio);
     canvas.height = Math.round(height * ratio);
     context.setTransform(ratio, 0, 0, ratio, 0, 0);

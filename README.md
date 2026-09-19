@@ -41,6 +41,8 @@ Official references: [tracking](https://docs.umami.is/docs/collect-data), [shari
 
 ## Publish
 
+When changing CSS or JavaScript, update the `?v=...` version on its URL in `index.html` (for example, `20260919-2` to `20260919-3`). This prevents returning visitors from mixing new HTML with cached files from an older release.
+
 Run inside `/Users/shangkun/Desktop/skjiang07.github.io`:
 
 ```sh
